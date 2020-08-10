@@ -1,0 +1,60 @@
+html {
+  scroll-behavior: smooth;
+}
+h1 {
+    font-size: 5em;
+}
+.search-form {
+    width: 50%;
+}
+.rating i {
+    color: gold;
+}
+.movie-info {
+    min-width: 275px;
+}
+.tmdb-logo {
+    width: 200px;
+}
+.movies {
+    width: 75%;
+}
+.about-dev {
+    width: 50%;
+    min-width: 560px;
+}
+.about-api {
+    width: 25%;
+    min-width: 250px;
+}
+@media screen and (max-width: 674px) {
+    h1 {
+        font-size: 2.5em;
+    }
+    p {
+        font-size: 0.8em;
+    }
+    .search-form {
+        width: 90%;
+        margin: 0;
+        padding: 0;
+    }
+}
+@media screen and (max-width: 720px) {
+    .about-dev, .about-api, .movies {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 890px) {
+    .about-dev, .about-api {
+        min-width: 75%;
+    }
+}
+@media screen and (max-width: 1064px) {
+    .display-4 {
+        font-size: 2em;
+    }
+    .search-form {
+        width: 75%;
+    }
+}
