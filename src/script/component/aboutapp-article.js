@@ -15,7 +15,7 @@ class AboutAppArticle extends HTMLElement {
                 min-width: 250px;
             }
             @media screen and (max-width: 720px) {
-                .about-dev, .about-api, .movies {
+                .about-dev, .about-api {
                     width: 100%;
                 }
             }
