@@ -52,10 +52,10 @@ class AboutAppArticle extends HTMLElement {
                     <p class="text-left small px-3">Hi! I'm currently a student at Institut Teknologi Padang, majoring in Informatics Engineering. Interested in topics around Informatics escpecially data and programming. Like to learn new things and like to learn (self-taught) foreign languages. Fan of soothing/ melancholy musics, hero movies, TV series, and sweet & spicy foods.</p>
                     <p class="lead px-3">Find me on:</p>
                     <p class="d-flex flex-row px-3">
-                        <a target="blank" href="https://www.facebook.com/nursyahrina17"><i class="fab fa-facebook-square fa-2x mr-2"></i></a>
-                        <a target="blank" href="https://twitter.com/nursy_81"><i class="fab fa-twitter-square fa-2x mr-2"></i></a>
-                        <a target="blank" href="https://www.linkedin.com/in/nursyahrina/"><i class="fab fa-linkedin fa-2x mr-2"></i></a>
-                        <a target="blank" href="https://github.com/nursyahrina"><i class="fab fa-github-square fa-2x mr-2"></i></a>
+                        <a target="blank" href="https://www.facebook.com/nursyahrina17"><i class="fab fa-facebook-square fa-2x mr-4"></i></a>
+                        <a target="blank" href="https://twitter.com/nursy_81"><i class="fab fa-twitter-square fa-2x mr-4"></i></a>
+                        <a target="blank" href="https://www.linkedin.com/in/nursyahrina/"><i class="fab fa-linkedin fa-2x mr-4"></i></a>
+                        <a target="blank" href="https://github.com/nursyahrina"><i class="fab fa-github-square fa-2x mr-4"></i></a>
                         <a target="blank" href="https://www.youtube.com/channel/UC9X_e_SsHG8dfCKMcM9KMlw"><i class="fab fa-youtube-square fa-2x"></i></a>
                     </p>
                 </section>
@@ -66,7 +66,7 @@ class AboutAppArticle extends HTMLElement {
                         <div class="text-center">
                             <p class="mb-2 text-muted">This website using APIs developed by:</p>
                             <h5>The Movie Database (TMDb)</h5>
-                            <a href="#" class="card-link">Check out TMDb APIs docs</a>
+                            <a target="blank" href="https://developers.themoviedb.org/3/getting-started/introduction" class="card-link">Check out TMDb APIs docs</a>
                         </div>
                     </div>
                 </section>

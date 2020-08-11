@@ -13,13 +13,13 @@ class NavBar extends HTMLElement {
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
+                    <li class="nav-item active ml-2">
                         <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item ml-2">
                         <a class="nav-link" href="#movies">Movies</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item ml-2">
                         <a class="nav-link" href="#about">About</a>
                     </li>
                 </ul>
