@@ -1,6 +1,15 @@
+* {
+  margin: 0;
+  padding: 0;
+}
 html {
   scroll-behavior: smooth;
 }
-.movies {
-    width: 75%;
+movie-list {
+  width: 75%;
+}
+@media screen and (max-width: 720px) {
+  movie-list {
+    width: 100%;
+  }
 }
