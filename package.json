@@ -20,9 +20,11 @@
   "dependencies": {
     "bootstrap": "^4.5.2",
     "jquery": "^3.5.1",
-    "popper.js": "^1.16.1"
+    "popper.js": "^1.16.1",
+    "regenerator-runtime": "^0.13.7"
   },
   "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.14.0",
     "css-loader": "^4.2.1",
     "html-webpack-plugin": "^4.3.0",
     "style-loader": "^1.2.1",
