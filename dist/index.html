@@ -3,22 +3,17 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <script src="https://kit.fontawesome.com/a970c7392c.js" crossorigin="anonymous"></script>
     
-    <link rel="stylesheet" href="src/styles/style.css">
     <title>MovieReviews</title>
 </head>
-<body class="text-center">
+<body class="bg-dark text-center">
     <header>
         <nav-bar></nav-bar>
         <search-header></search-header>
     </header>
     <main>
-        <div id="content" class="w-100 d-flex flex-column justify-content-center text-left">
-            <article id="movies" class="movies align-self-center m-2 p-4">
-                <h2 class="mt-5 ml-4 display-4">Movies</h2>
-                <movie-item></movie-item>
-            </article>
+        <div id="content" class="d-flex flex-column justify-content-center text-left bg-light w-100 m-0">
+            <movie-list id="movies" class="align-self-center m-2 p-4"></movie-list>
             <aboutapp-article></aboutapp-article>
         </div>
     </main>
