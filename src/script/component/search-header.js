@@ -1,6 +1,15 @@
 class SerchHeader extends HTMLElement {
 	connectedCallback() {
 		this.render();
+    }
+    
+    set clickEvent(event) {
+		this._clickEvent = event;
+		this.render();
+	}
+
+	get value() {
+		return this.querySelector("#inputKeyword").value;
 	}
 
 	render() {
@@ -42,10 +51,11 @@ class SerchHeader extends HTMLElement {
                     <label class="mt-3" for="inputKeyword">Keyword:</label>
                     <input class="form-control shadow-lg" type="text" id="inputKeyword" placeholder="Enter your keyword here!">
                 </div>
-                <button type="submit" class="btn btn-primary shadow-lg align-self-end mb-3 px-3">Search Movie</button>
+                <a class="btn btn-primary shadow-lg align-self-end mb-3 px-3" id="searchButtonElement">Search Movie</a>
             </form>
         </div>
-		`;
+        `;
+        this.querySelector("#searchButtonElement").addEventListener("click", this._clickEvent);
 	}
 }
 

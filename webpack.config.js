@@ -30,5 +30,6 @@ module.exports = {
             template: "./src/template.html",
             filename: "index.html"
         })
-    ]
+    ],
+    devtool: 'eval-source-map'
 }
