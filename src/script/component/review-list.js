@@ -8,7 +8,7 @@ class ReviewList extends HTMLElement {
     }
 
     renderError() {
-        this.innerHTML = `<h5 class="text-muted mx-4 p-2">Sorry, no reviews yet for this movie</h5>`;
+        this.innerHTML = `<h5 class="mx-4 p-2">Sorry, no reviews yet for this movie</h5>`;
     }
 
     render() {

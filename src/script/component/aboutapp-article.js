@@ -25,9 +25,9 @@ class AboutAppArticle extends HTMLElement {
                 }
             }
         </style>
-		<article id="about" class="d-flex flex-wrap justify-content-center m-4">
+		<article id="about" class="d-flex flex-wrap justify-content-center text-dark m-0 p-4">
                 <section class="card rounded shadow m-2 p-4 about-dev">
-                    <h2 class="display-4 mx-3">About Developer</h2>
+                    <h2 class="display-4 text-secondary mx-3">About Developer</h2>
                     <div class="media flex-wrap">
                         <img class="mt-3 ml-3 rounded-circle" alt="Nursyahrina's Profile" src="https://nursyahrina.000webhostapp.com/img/nursyahrina.jpg" style="width: 120px;">
                         <div class="media-body d-flex flex-column align-items-stretch p-2">
@@ -59,12 +59,12 @@ class AboutAppArticle extends HTMLElement {
                         <a target="blank" href="https://www.youtube.com/channel/UC9X_e_SsHG8dfCKMcM9KMlw"><i class="fab fa-youtube-square fa-2x"></i></a>
                     </p>
                 </section>
-                <section class="card rounded shadow m-2 p-4 about-api">
-                    <h2 class="display-4 text-center">The APIs</h2>
+                <section class="card bg-light rounded shadow m-2 p-4 about-api">
+                    <h2 class="display-4 text-center text-secondary">The APIs</h2>
                     <div class="d-flex flex-column">
                         <img class="rounded-circle align-self-center p-3 m-3" src="https://nursyahrina.000webhostapp.com/img/TMDb%20_180.jpg" alt="TMDb logo">
                         <div class="text-center">
-                            <p class="mb-2 text-muted">This website using APIs developed by:</p>
+                            <p class="mb-2">This website using APIs developed by:</p>
                             <h5>The Movie Database (TMDb)</h5>
                             <a target="blank" href="https://developers.themoviedb.org/3/getting-started/introduction" class="card-link">Check out TMDb APIs docs</a>
                         </div>

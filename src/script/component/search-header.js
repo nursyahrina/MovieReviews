@@ -25,9 +25,6 @@ class SerchHeader extends HTMLElement {
                 h1 {
                     font-size: 2.5em;
                 }
-                p {
-                    font-size: 0.8em;
-                }
                 .search-form {
                     width: 90%;
                     margin: 0;
@@ -42,7 +39,7 @@ class SerchHeader extends HTMLElement {
         </style>
 		<div class="jumbotron d-flex flex-column bg-dark text-light shadow-lg">
             <h1 class="p-5 mt-5">Welcome to MovieReviews!</h1>
-            <h3 class="lead mb-3">Web application to search for movies by title, complete with rating and reviews.</h3>
+            <h2 class="lead mb-3">Web application to search for movies by title, complete with rating and reviews.</h2>
             <span class="border border-secondary align-self-center my-2 w-75"></span>
             <p class="m-0 p-3">Using <em>The Movie Database (TMDb) APIs</em> to explore millions of movies. <strong>Find out now!</strong></p>
             

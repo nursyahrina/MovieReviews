@@ -1,0 +1,30 @@
+@import '/node_modules/bootstrap/scss/functions';
+
+/* overriding sass styles */
+$theme-colors: (
+  "primary": #A5121F,
+  "secondary": #6E0C14,
+  "light": #FDEDEE,
+  "dark": #272838
+);
+
+@import '/node_modules/bootstrap/scss/bootstrap.scss';
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Sansita:wght@400;700&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font: 1rem/1.5 var(--font-family-sans-serif);
+}
+h1, h2, h3, h4, h5 {
+  font-family: 'Sansita';
+}
+movie-list {
+  width: 75%;
+}
+@media screen and (max-width: 720px) {
+  movie-list {
+    width: 100%;
+  }
+}

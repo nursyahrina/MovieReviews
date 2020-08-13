@@ -5,7 +5,7 @@ class NavBar extends HTMLElement {
 
 	render() {
 		this.innerHTML = `
-		<nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top p-2 px-4">
+		<nav class="navbar navbar-expand-lg navbar-dark bg-primary font-weight-bold fixed-top p-2 px-4">
             <a class="navbar-brand" href="#">MovieReviews</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
