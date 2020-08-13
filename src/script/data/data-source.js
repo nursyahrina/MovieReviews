@@ -42,6 +42,20 @@ class DataSource {
             }
         })
     }
+
+    static fetchGenres() {
+		return fetch(`https://api.themoviedb.org/3/genre/movie/list?api_key=35d784395c783fd0f588bbd9b34421c8&language=en-US`)
+        .then(response => {
+            return response.json();
+        })
+        .then(responseJson => {
+            if(responseJson.genres){
+                return Promise.resolve(responseJson.genres);
+            } else {
+                return Promise.reject(`List of genres are not found`);
+            }
+        })
+	}
 }
 
 export default DataSource;

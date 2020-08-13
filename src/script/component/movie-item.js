@@ -10,6 +10,10 @@ class MovieItem extends HTMLElement {
     get movieId() {
         return this._movie.id;
     }
+
+    get movieGenreIds() {
+        return this._movie.genre_ids;
+    }
     
 	render() {
         const stars = this.setStarsDisplay(this._movie.vote_average);
@@ -43,7 +47,7 @@ class MovieItem extends HTMLElement {
                 <h3 class="text-primary p-2">${this._movie.title}</h3>
                 <div class="d-flex flex-wrap">
                     <p class="px-2 text-muted movie-info">Release date: ${new Date(this._movie.release_date).toDateString()}</p>
-                    <p class="px-2 text-muted movie-info">Genres: </p>
+                    <p class="px-2 text-muted movie-info" id="genres${this._movie.id}">Genres: </p>
                 </div>
                 <p class="p-2">${this._movie.overview}</p>
                 <div class="d-flex flex-row justify-content-between">
