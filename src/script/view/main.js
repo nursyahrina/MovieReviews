@@ -60,28 +60,6 @@ const main = () => {
         });
     };
 
-    const updateReviews = () => {
-        
-        const movieItemElements = document.querySelectorAll("movie-item");
-        movieItemElements.forEach( async movieItemElement => {
-            const movieId = movieItemElement.movieId;
-            const reviewListElement = document.createElement("review-list");
-            try {
-                const result = await DataSource.getReviews(movieId);
-                if (result.length > 0) {
-                    reviewListElement.reviews = result;
-                } else {
-                    reviewListElement.renderError();
-                }
-            } catch (message) {
-                reviewListElement.renderError();
-            } finally {
-                movieItemElement.querySelector(".collapse").appendChild(reviewListElement);
-                
-            }
-        });
-    };
-
     const renderMoviesResult = results => {
         movieListElement.movies = results;
     };
