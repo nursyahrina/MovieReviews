@@ -7,7 +7,6 @@ module.exports = {
         path: path.resolve(__dirname, "dist"),
         filename: "bundle.js"
     },
-    mode: "development",
     module: {
         rules: [
             /* style and css loader */
@@ -30,6 +29,5 @@ module.exports = {
             template: "./src/template.html",
             filename: "index.html"
         })
-    ],
-    devtool: 'eval-source-map'
+    ]
 }

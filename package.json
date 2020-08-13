@@ -4,8 +4,8 @@
   "description": "Web application to search movies based on title and display the details of the movie including rating and reviews, utilizing TheMovieDB API.",
   "main": "app.js",
   "scripts": {
-    "build": "webpack",
-    "start-dev": "webpack-dev-server"
+    "build": "webpack --config webpack.prod.js",
+    "start-dev": "webpack-dev-server --config webpack.dev.js"
   },
   "repository": {
     "type": "git",
@@ -20,16 +20,19 @@
   "dependencies": {
     "bootstrap": "^4.5.2",
     "jquery": "^3.5.1",
-    "popper.js": "^1.16.1",
     "regenerator-runtime": "^0.13.7"
   },
   "devDependencies": {
+    "@babel/core": "^7.11.1",
+    "@babel/preset-env": "^7.11.0",
     "@fortawesome/fontawesome-free": "^5.14.0",
+    "babel-loader": "^8.1.0",
     "css-loader": "^4.2.1",
     "html-webpack-plugin": "^4.3.0",
     "style-loader": "^1.2.1",
     "webpack": "^4.44.1",
     "webpack-cli": "^3.3.12",
-    "webpack-dev-server": "^3.11.0"
+    "webpack-dev-server": "^3.11.0",
+    "webpack-merge": "^5.1.1"
   }
 }
