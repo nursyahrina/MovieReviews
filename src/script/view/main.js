@@ -22,15 +22,19 @@ const main = () => {
     const onButtonSearchClicked = async () => {
         try {
             const result = await DataSource.searchMovie(searchElement.value);
-            renderMoviesResult(result);
+            if (result.length > 0) {
+                renderMoviesResult(result);
+                document.getElementById("subheader").innerHTML = "Search Results";
+                document.querySelectorAll("review-list").forEach(review => {
+                    review.remove();
+                });
+            displayReviews();
+            } else {
+                fallbackMoviesResult("Sorry, no movies were found using these keywords. Try to enter other keywords. Good luck!");
+            }
         } catch (message) {
             fallbackMoviesResult(message);
         } finally {
-            document.getElementById("subheader").innerHTML = "Search Results";
-            document.querySelectorAll("review-list").forEach(review => {
-                review.remove();
-            });
-            displayReviews();
             location.replace("#movies");
         }
     };
