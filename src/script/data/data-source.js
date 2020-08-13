@@ -9,7 +9,7 @@ class DataSource {
             if(responseJson.results){
                 return Promise.resolve(responseJson.results);
             } else {
-                return Promise.reject(`Popular movies are not found`);
+                return Promise.reject(`Most Popular movies are not found`);
             }
         })
 	}
@@ -25,6 +25,20 @@ class DataSource {
                 return Promise.resolve(responseJson.results);
             } else {
                 return Promise.reject(`${keyword} is not found`);
+            }
+        })
+    }
+
+    static getReviews(movieId) {
+        return fetch(`https://api.themoviedb.org/3/movie/${movieId}/reviews?api_key=35d784395c783fd0f588bbd9b34421c8&language=en-US&page=1`)
+        .then(response => {
+            return response.json();
+        })
+        .then(responseJson => {
+            if(responseJson.results){
+                return Promise.resolve(responseJson.results);
+            } else {
+                return Promise.reject(`Review is not found`);
             }
         })
     }

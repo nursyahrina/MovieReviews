@@ -1,3 +1,5 @@
+import '../component/review-list.js';
+import '../component/movie-item.js';
 import '../component/movie-list.js';
 import '../component/search-header.js';
 import DataSource from '../data/data-source.js';
@@ -9,32 +11,77 @@ const main = () => {
     const initMovieList = async () => {
         try {
             const result = await DataSource.popularMovies();
-            renderResult(result);
+            renderMoviesResult(result);
         } catch (message) {
-            fallbackResult(message)
+            fallbackMoviesResult(message);
+        } finally {
+            displayReviews();
         }
-        const heading = document.createElement("h4");
-        heading.classList += "w-75 align-self-center mt-5 ml-2 mb-0 px-5";
-        heading.innerHTML = "Top Popular";
-        movieListElement.insertAdjacentElement("beforebegin", heading);
     };
 
     const onButtonSearchClicked = async () => {
         try {
             const result = await DataSource.searchMovie(searchElement.value);
-            renderResult(result);
+            renderMoviesResult(result);
         } catch (message) {
-            fallbackResult(message)
+            fallbackMoviesResult(message);
+        } finally {
+            document.getElementById("subheader").innerHTML = "Search Results";
+            document.querySelectorAll("review-list").forEach(review => {
+                review.remove();
+            });
+            displayReviews();
         }
-        movieListElement.previousElementSibling.remove();
-        movieListElement.firstElementChild.classList.add("mt-5");
     };
 
-    const renderResult = results => {
+    const displayReviews = () => {
+        const movieItemElements = document.querySelectorAll("movie-item");
+        movieItemElements.forEach( async movieItemElement => {
+            const movieId = movieItemElement.movieId;
+            const reviewListElement = document.createElement("review-list");
+            try {
+                const result = await DataSource.getReviews(movieId);
+                if (result.length > 0) {
+                    reviewListElement.reviews = result;
+                } else {
+                    reviewListElement.renderError();
+                }
+            } catch (message) {
+                reviewListElement.renderError();
+            } finally {
+                movieItemElement.querySelector(".collapse").appendChild(reviewListElement);
+                
+            }
+        });
+    };
+
+    const updateReviews = () => {
+        
+        const movieItemElements = document.querySelectorAll("movie-item");
+        movieItemElements.forEach( async movieItemElement => {
+            const movieId = movieItemElement.movieId;
+            const reviewListElement = document.createElement("review-list");
+            try {
+                const result = await DataSource.getReviews(movieId);
+                if (result.length > 0) {
+                    reviewListElement.reviews = result;
+                } else {
+                    reviewListElement.renderError();
+                }
+            } catch (message) {
+                reviewListElement.renderError();
+            } finally {
+                movieItemElement.querySelector(".collapse").appendChild(reviewListElement);
+                
+            }
+        });
+    };
+
+    const renderMoviesResult = results => {
         movieListElement.movies = results;
     };
 
-    const fallbackResult = message => {
+    const fallbackMoviesResult = message => {
         movieListElement.renderError(message);
     };
 
