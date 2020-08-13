@@ -31,6 +31,7 @@ const main = () => {
                 review.remove();
             });
             displayReviews();
+            location.replace("#movies");
         }
     };
 
