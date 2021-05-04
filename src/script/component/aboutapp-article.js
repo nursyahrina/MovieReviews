@@ -29,7 +29,7 @@ class AboutAppArticle extends HTMLElement {
                 <section class="card rounded shadow m-2 p-4 about-dev">
                     <h2 class="display-4 text-secondary mx-3">About Developer</h2>
                     <div class="media flex-wrap">
-                        <img class="mt-3 ml-3 rounded-circle" alt="Nursyahrina's Profile" src="https://nursyahrina.000webhostapp.com/img/nursyahrina.jpg" style="width: 120px;">
+                        <img class="mt-3 ml-3 rounded-circle" alt="Nursyahrina's Profile" src="https://nursyahrina.github.io/img/saya.jpg" style="width: 120px;">
                         <div class="media-body d-flex flex-column align-items-stretch p-2">
                             <h3 class="px-2 text-primary">Nursyahrina</h3>
                             <p class="px-2">Informatics Engineering Student</p> 
@@ -62,7 +62,7 @@ class AboutAppArticle extends HTMLElement {
                 <section class="card bg-light rounded shadow m-2 p-4 about-api">
                     <h2 class="display-4 text-center text-secondary">The APIs</h2>
                     <div class="d-flex flex-column">
-                        <img class="rounded-circle align-self-center p-3 m-3" src="https://nursyahrina.000webhostapp.com/img/TMDb%20_180.jpg" alt="TMDb logo">
+                        <img class="rounded-circle align-self-center p-3 m-3" src="https://nursyahrina.github.io/img/TMDb.jpg" alt="TMDb logo">
                         <div class="text-center">
                             <p class="mb-2">This website using APIs developed by:</p>
                             <h5>The Movie Database (TMDb)</h5>
